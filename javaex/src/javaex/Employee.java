@@ -1,0 +1,41 @@
+package javaex;
+
+public class Employee {
+   private String name;
+   private int no, pay; //사번
+   
+   public Employee(String name,int no, int pay) {
+      this.name = name;
+      this.no = no;
+      this.pay = pay;
+   }
+   public void print() {
+      System.out.print("이름 : "+name);
+      System.out.print(", 사번 : "+no);
+      System.out.println(", 급여 : "+pay);
+   }
+   public String getName() {
+      return name;
+   }
+   public void setName(String name) {
+      System.out.println("이름 수정 불가");
+   }
+   public int getNo() {
+      return no;
+   }
+   public void setNo(int no) {
+      System.out.println("사원 번호 수정 불가");
+   }
+   public int getPay() {
+      return pay;
+   }
+   public void setPay(int pay) {
+      if(pay<2200000) {
+         System.out.println("최저임금미만입니다. 확인해보세요.");
+      }
+      else {
+         System.out.println("급여를 수정합니다.");
+         this.pay = pay;
+      }
+   }
+}
